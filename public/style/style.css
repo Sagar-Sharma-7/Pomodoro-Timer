@@ -36,12 +36,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: hidden;
 }
 
 .container #animation {
   width: 100%;
   height: 60vh;
-  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,20 +53,83 @@ body {
           align-items: center;
 }
 
-.container #animation .orbit {
-  height: 100px;
-  width: 100px;
+.container #animation .sun {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background-color: yellow;
+  border-radius: 50%;
+}
+
+.container #animation .orbit1 {
+  height: 120px;
+  width: 120px;
   z-index: 4;
-  border-radius: 100%;
-  border: 1px solid red;
+  border-radius: 30%;
+  position: absolute;
+  border: 1px solid #212121;
   -webkit-animation: rotate1 3s linear infinite;
           animation: rotate1 3s linear infinite;
 }
 
-.container #animation .orbit .p1 {
+.container #animation .orbit1 .p1 {
   width: 20px;
   height: 20px;
-  background-color: green;
+  background-color: #ed2ab9;
+  border-radius: 50%;
+}
+
+.container #animation .orbit2 {
+  height: 170px;
+  width: 170px;
+  z-index: 4;
+  position: absolute;
+  border-radius: 30%;
+  border: 1px solid #212121;
+  -webkit-animation: rotate2 10s linear infinite;
+          animation: rotate2 10s linear infinite;
+}
+
+.container #animation .orbit2 .p2 {
+  width: 25px;
+  height: 25px;
+  background-color: #c93b3b;
+  border-radius: 50%;
+}
+
+.container #animation .orbit3 {
+  height: 200px;
+  width: 200px;
+  z-index: 4;
+  position: absolute;
+  border-radius: 30%;
+  border: 1px solid #212121;
+  -webkit-animation: rotate3 20s linear infinite;
+          animation: rotate3 20s linear infinite;
+}
+
+.container #animation .orbit3 .p3 {
+  width: 12px;
+  height: 12px;
+  background-color: #3b42c9;
+  border-radius: 50%;
+}
+
+.container #animation .orbit4 {
+  height: 300px;
+  width: 300px;
+  z-index: 4;
+  position: absolute;
+  border-radius: 30%;
+  border: 1px solid #212121;
+  -webkit-animation: rotate4 7s linear infinite;
+          animation: rotate4 7s linear infinite;
+}
+
+.container #animation .orbit4 .p4 {
+  width: 50px;
+  height: 50px;
+  background-color: #1fea23;
   border-radius: 50%;
 }
 
@@ -89,6 +152,72 @@ body {
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate2 {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate2 {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes rotate3 {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate3 {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate4 {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate4 {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
   }
 }
 /*# sourceMappingURL=style.css.map */
