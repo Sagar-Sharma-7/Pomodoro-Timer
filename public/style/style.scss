@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
 @mixin flex($jus: center, $alg: center){
     display: flex;
     justify-content: $jus;
@@ -25,6 +27,7 @@ html {
 
 body{
     background-color: #000;
+    font-family: 'Roboto Slab', serif;
 }
 
 .container{
@@ -140,5 +143,35 @@ body{
     }
     #timer{
         @include dimension(100%, 40vh);
+        @include flex();
+        flex-direction: column;
+        #top{
+            @include dimension(80%, 20vh);
+            margin: auto 10%;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(2, 1fr);
+            .time{
+                color: white;     
+                font-size: 4rem;
+                height: 10vh;
+                @include flex();
+                box-shadow: 0 2px 30px 0 rgba(106, 106, 106, 0.37);
+                backdrop-filter: blur( 2.5px );
+                -webkit-backdrop-filter: blur( 2.5px );
+                border-radius: 10px;
+                border: 1px solid rgba( 255, 255, 255, 0.18 );
+            }
+        }
+        #pause{
+            @include dimension(70%, 5vh);
+            margin-bottom: 10vh;
+            margin-top: -10vh;
+            border: none;
+            outline: none;
+            outline: 3px double rgb(142, 28, 255);
+            background-color: transparent;
+            color: white;
+        }
     }
 }
