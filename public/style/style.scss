@@ -33,13 +33,14 @@ body{
     flex-direction: column;
     overflow: hidden;
     #animation{
-        @include dimension(100%, 60vh);
+        overflow: hidden;
+        @include dimension(100%, 58vh);
         @include flex();
         .sun{
             position: absolute;
             @include dimension(90px, 90px);
             background-color:yellow;
-            border-radius: 50%;
+            border-radius: 40%;
 
         }
         .orbit1{
@@ -48,8 +49,8 @@ body{
 	        z-index: 4;	
 	        border-radius: 30%;
             position: absolute;
-            border: 1px solid rgb(33, 33, 33);
-            animation: rotate1 3s linear infinite;
+            border: 1px solid rgb(22, 22, 22);
+            animation: rotate1 20s linear infinite;
             .p1{
                 @include dimension(20px, 20px);
                 background-color: rgb(237, 42, 185);
@@ -62,7 +63,7 @@ body{
 	        z-index: 4;	
             position: absolute;
 	        border-radius: 30%;
-            border: 1px solid rgb(33, 33, 33);
+            border: 1px solid rgb(22, 22, 22);
             animation: rotate2 10s linear infinite;
             .p2{
                 @include dimension(25px, 25px);
@@ -77,8 +78,8 @@ body{
 	        z-index: 4;	
             position: absolute;
 	        border-radius: 30%;
-            border: 1px solid rgb(33, 33, 33);
-            animation: rotate3 20s linear infinite;
+            border: 1px solid rgb(22, 22, 22);
+            animation: rotate3 14s linear infinite;
             .p3{
                 @include dimension(12px, 12px);
                 background-color: rgb(59, 66, 201);
@@ -93,8 +94,8 @@ body{
 	        z-index: 4;	
             position: absolute;
 	        border-radius: 30%;
-            border: 1px solid rgb(33, 33, 33);
-            animation: rotate4 7s linear infinite;
+            border: 1px solid rgb(22, 22, 22);
+            animation: rotate4 30s linear infinite;
             .p4{
                 @include dimension(50px, 50px);
                 background-color: rgb(31, 234, 35);
@@ -107,7 +108,9 @@ body{
             0%{
                 transform: rotate(0);
             }
-            100%{transform: rotate(360deg)}
+            100%{
+                transform: rotate(360deg);
+            }
         }
         @keyframes rotate2 {
             0%{
@@ -128,5 +131,14 @@ body{
             }
             100%{transform: rotate(-360deg)}
         }
+    }
+    #filler{
+        @include dimension(96%, 2vh);
+        background-color:rgb(32, 32, 32);
+        border-radius: 20px;
+        margin: auto 1%;
+    }
+    #timer{
+        @include dimension(100%, 40vh);
     }
 }

@@ -40,8 +40,9 @@ body {
 }
 
 .container #animation {
+  overflow: hidden;
   width: 100%;
-  height: 60vh;
+  height: 58vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,7 +59,7 @@ body {
   width: 90px;
   height: 90px;
   background-color: yellow;
-  border-radius: 50%;
+  border-radius: 40%;
 }
 
 .container #animation .orbit1 {
@@ -67,9 +68,9 @@ body {
   z-index: 4;
   border-radius: 30%;
   position: absolute;
-  border: 1px solid #212121;
-  -webkit-animation: rotate1 3s linear infinite;
-          animation: rotate1 3s linear infinite;
+  border: 1px solid #161616;
+  -webkit-animation: rotate1 20s linear infinite;
+          animation: rotate1 20s linear infinite;
 }
 
 .container #animation .orbit1 .p1 {
@@ -85,7 +86,7 @@ body {
   z-index: 4;
   position: absolute;
   border-radius: 30%;
-  border: 1px solid #212121;
+  border: 1px solid #161616;
   -webkit-animation: rotate2 10s linear infinite;
           animation: rotate2 10s linear infinite;
 }
@@ -103,9 +104,9 @@ body {
   z-index: 4;
   position: absolute;
   border-radius: 30%;
-  border: 1px solid #212121;
-  -webkit-animation: rotate3 20s linear infinite;
-          animation: rotate3 20s linear infinite;
+  border: 1px solid #161616;
+  -webkit-animation: rotate3 14s linear infinite;
+          animation: rotate3 14s linear infinite;
 }
 
 .container #animation .orbit3 .p3 {
@@ -121,9 +122,9 @@ body {
   z-index: 4;
   position: absolute;
   border-radius: 30%;
-  border: 1px solid #212121;
-  -webkit-animation: rotate4 7s linear infinite;
-          animation: rotate4 7s linear infinite;
+  border: 1px solid #161616;
+  -webkit-animation: rotate4 30s linear infinite;
+          animation: rotate4 30s linear infinite;
 }
 
 .container #animation .orbit4 .p4 {
@@ -219,5 +220,18 @@ body {
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg);
   }
+}
+
+.container #filler {
+  width: 96%;
+  height: 2vh;
+  background-color: #202020;
+  border-radius: 20px;
+  margin: auto 1%;
+}
+
+.container #timer {
+  width: 100%;
+  height: 40vh;
 }
 /*# sourceMappingURL=style.css.map */
