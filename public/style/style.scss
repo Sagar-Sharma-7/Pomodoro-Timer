@@ -1,5 +1,59 @@
+@mixin flex($jus: center, $alg: center){
+    display: flex;
+    justify-content: $jus;
+    align-items: $alg;
+}
+@mixin dimension($ln, $hg){
+    width: $ln;
+    height: $hg;
+}
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    font-size: 12px;
+    @media (min-width: 700px) {
+      font-size: calc(10px + 0.5vw);
+    }
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #000;
+}
+
+.container{
+    @include dimension(100%, 100%);
+    @include flex();
+    flex-direction: column;
+    #animation{
+        @include dimension(100%, 60vh);
+        background-color: white;
+        @include flex();
+        .orbit{
+            height: 100px;
+	        width: 100px;
+	        z-index: 4;	
+	        border-radius: 100%;
+            border: 1px solid red;
+            animation: rotate1 3s linear infinite;
+            .p1{
+                @include dimension(20px, 20px);
+                background-color: green;
+                border-radius:50%;
+            }
+        }
+
+        @keyframes rotate1 {
+            0%{
+                transform: rotate(0);
+            }
+            100%{transform: rotate(360deg)}
+        }
+    }
 }
