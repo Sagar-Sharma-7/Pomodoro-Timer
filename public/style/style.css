@@ -331,6 +331,10 @@ body {
 }
 
 #timer_slot {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
   bottom: 0px;
   width: 94%;
@@ -356,7 +360,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 #timer_slot .t25 {

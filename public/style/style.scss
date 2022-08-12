@@ -200,6 +200,7 @@ body{
 }
 
 #timer_slot{
+    user-select: none;
     position: absolute;
     bottom: 0px;
     @include dimension(94%, 38vh);
@@ -212,7 +213,7 @@ body{
         border-radius: 20px;
         color: white;
         @include flex();
-        font-size:2rem;
+        font-size:3rem;
     }
     .t25{background-color: rgb(107, 247, 110);}
     .t30{background-color: rgb(247, 117, 117);}
