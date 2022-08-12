@@ -297,7 +297,7 @@ body {
 
 #show_hide {
   position: absolute;
-  bottom: 1px;
+  bottom: 5px;
   width: 10%;
   height: auto;
   margin: auto 45%;
@@ -306,31 +306,5 @@ body {
   background-color: transparent;
   color: white;
   font-size: 1.2rem;
-  -webkit-animation: updown 1s linear infinite;
-          animation: updown 1s linear infinite;
-}
-
-@-webkit-keyframes updown {
-  0% {
-    bottom: 1px;
-  }
-  50% {
-    bottom: 10px;
-  }
-  100% {
-    bottom: 1px;
-  }
-}
-
-@keyframes updown {
-  0% {
-    bottom: 1px;
-  }
-  50% {
-    bottom: 10px;
-  }
-  100% {
-    bottom: 1px;
-  }
 }
 /*# sourceMappingURL=style.css.map */

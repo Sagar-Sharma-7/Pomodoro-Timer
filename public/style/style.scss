@@ -179,7 +179,7 @@ body{
 
 #show_hide{
     position: absolute;
-    bottom: 1px;
+    bottom: 5px;
     @include dimension(10%, auto);
     margin: auto 45%;
     border: none;
@@ -187,18 +187,4 @@ body{
     background-color: transparent;
     color: white;
     font-size: 1.2rem;
-    animation: updown 1s linear infinite;
-}
-
-@keyframes updown {
-    0%{
-        bottom: 1px;
-    }
-    50%{
-        bottom: 10px;
-    }
-    100%{
-        bottom: 1px;
-    }
-    
 }
