@@ -44,6 +44,7 @@ body{
             @include dimension(90px, 90px);
             background-color:yellow;
             border-radius: 40%;
+            animation: sun 2s linear infinite;
 
         }
         .orbit1{
@@ -52,7 +53,7 @@ body{
 	        z-index: 4;	
 	        border-radius: 30%;
             position: absolute;
-            border: 1px solid rgb(22, 22, 22);
+            border: 1px solid rgb(33, 33, 33);
             animation: rotate1 20s linear infinite;
             .p1{
                 @include dimension(20px, 20px);
@@ -66,7 +67,7 @@ body{
 	        z-index: 4;	
             position: absolute;
 	        border-radius: 30%;
-            border: 1px solid rgb(22, 22, 22);
+            border: 1px solid rgb(33, 33, 33);
             animation: rotate2 10s linear infinite;
             .p2{
                 @include dimension(25px, 25px);
@@ -81,7 +82,7 @@ body{
 	        z-index: 4;	
             position: absolute;
 	        border-radius: 30%;
-            border: 1px solid rgb(22, 22, 22);
+            border: 1px solid rgb(33, 33, 33);
             animation: rotate3 14s linear infinite;
             .p3{
                 @include dimension(12px, 12px);
@@ -97,13 +98,22 @@ body{
 	        z-index: 4;	
             position: absolute;
 	        border-radius: 30%;
-            border: 1px solid rgb(22, 22, 22);
+            border: 1px solid rgb(33, 33, 33);
             animation: rotate4 30s linear infinite;
             .p4{
                 @include dimension(50px, 50px);
                 background-color: rgb(31, 234, 35);
                 border-radius:50%;
 
+            }
+        }
+
+        @keyframes sun {
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(360deg);
             }
         }
 
@@ -142,7 +152,7 @@ body{
         margin: auto 1%;
     }
     #timer{
-        @include dimension(100%, 40vh);
+        @include dimension(100%, 38vh);
         @include flex();
         flex-direction: column;
         #top{
