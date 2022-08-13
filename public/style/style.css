@@ -304,7 +304,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.container #timer #pause {
+.container #timer button {
   width: 60%;
   height: 5vh;
   margin-bottom: 12vh;
@@ -315,6 +315,10 @@ body {
   background-color: #8e1cff;
   font-size: 1.5rem;
   color: white;
+}
+
+.container #timer #pause {
+  display: none;
 }
 
 #show_hide {

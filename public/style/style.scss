@@ -173,7 +173,7 @@ body{
                 border: 1px solid rgba( 255, 255, 255, 0.18 );
             }
         }
-        #pause{
+        button{
             @include dimension(60%, 5vh);
             margin-bottom: 12vh;
             margin-top: -12vh;
@@ -183,6 +183,9 @@ body{
             background-color: rgb(142, 28, 255);
             font-size: 1.5rem;
             color: white;
+        }
+        #pause{
+            display: none;
         }
     }
 }
