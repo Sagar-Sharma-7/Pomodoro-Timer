@@ -29,8 +29,22 @@ start.addEventListener("click", () => {
     start.innerHTML = "RESUME";
     start.style.display = "none";
     pause.style.display = "block";
+    const time_due = new Date().getTime() + timer_min * 60 * 1000;
 
-    const time = new Date();
-    const min = time.getMinutes();
-    alert(min);
+    const timer = setInterval(() =>{
+        const now = new Date().getTime();
+
+        const time_left = time_due - now ;
+        let min_left = Math.floor((time_left % (1000* 60 * 60))/ (1000*60));
+        let sec_left = Math.floor((time_left % (1000* 60))/ 1000);
+
+        min.innerHTML = min_left;
+        sec.innerHTML = sec_left;
+
+        if(time_left < 0){
+            clearInterval(timer);
+            alert("time up");
+        }
+    }, 1000)
+
 });
