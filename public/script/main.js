@@ -30,21 +30,14 @@ start.addEventListener("click", () => {
     start.style.display = "none";
     pause.style.display = "block";
     const time_due = new Date().getTime() + timer_min * 60 * 1000;
-
     const timer = setInterval(() =>{
         const now = new Date().getTime();
+        const timeLeft = time_due - now;
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-        const time_left = time_due - now ;
-        let min_left = Math.floor((time_left % (1000* 60 * 60))/ (1000*60));
-        let sec_left = Math.floor((time_left % (1000* 60))/ 1000);
-
-        min.innerHTML = min_left;
-        sec.innerHTML = sec_left;
-
-        if(time_left < 0){
-            clearInterval(timer);
-            alert("time up");
-        }
-    }, 1000)
+        min.innerHTML = minutes;
+        sec.innerHTML = seconds;
+    }, 1000);
 
 });

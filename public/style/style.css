@@ -20,6 +20,7 @@ html {
 body {
   background-color: #000;
   font-family: 'Roboto Slab', serif;
+  overflow: hidden;
 }
 
 .container {
@@ -62,8 +63,8 @@ body {
   height: 90px;
   background-color: yellow;
   border-radius: 40%;
-  -webkit-animation: sun 2s linear infinite;
-          animation: sun 2s linear infinite;
+  -webkit-animation: sun 10s linear infinite;
+          animation: sun 10s linear infinite;
 }
 
 .container #animation .orbit1 {
@@ -143,9 +144,13 @@ body {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-  100% {
+  50% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
   }
 }
 
@@ -154,9 +159,13 @@ body {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-  100% {
+  50% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
   }
 }
 

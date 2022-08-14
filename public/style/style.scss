@@ -28,6 +28,7 @@ html {
 body{
     background-color: #000;
     font-family: 'Roboto Slab', serif;
+    overflow: hidden;
 }
 
 .container{
@@ -44,7 +45,7 @@ body{
             @include dimension(90px, 90px);
             background-color:yellow;
             border-radius: 40%;
-            animation: sun 2s linear infinite;
+            animation: sun 10s linear infinite;
 
         }
         .orbit1{
@@ -112,8 +113,11 @@ body{
             0%{
                 transform: rotate(0);
             }
-            100%{
+            50%{
                 transform: rotate(360deg);
+            }
+            100%{
+                transform: rotate(-360deg);
             }
         }
 
