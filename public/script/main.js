@@ -29,15 +29,29 @@ start.addEventListener("click", () => {
     start.innerHTML = "RESUME";
     start.style.display = "none";
     pause.style.display = "block";
-    const time_due = new Date().getTime() + timer_min * 60 * 1000;
+    const milli = new Date().getTime() + timer_min * 60 * 1000;
+    const date = new Date(milli);
+    const s = date.getSeconds();
+    let i = timer_min -1;
     const timer = setInterval(() =>{
-        const now = new Date().getTime();
-        const timeLeft = time_due - now;
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        const now = new Date();
+        let s_n = now.getSeconds();
+        let sLeft = s - s_n;
 
-        min.innerHTML = minutes;
-        sec.innerHTML = seconds;
+        if(sLeft >=0){
+            if(sLeft < 10){
+                sec.innerHTML = "0" + sLeft;
+            }else{
+                sec.innerHTML = sLeft;
+            }
+        }else{
+            if(60 + sLeft < 10){
+                sec.innerHTML = "0" + 60 + sLeft;
+            }else{
+                sec.innerHTML = 60 + sLeft;
+            }
+        };
+
     }, 1000);
 
 });
