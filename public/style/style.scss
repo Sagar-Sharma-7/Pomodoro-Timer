@@ -55,7 +55,7 @@ body{
 	        border-radius: 30%;
             position: absolute;
             border: 1px solid rgb(33, 33, 33);
-            animation: rotate1 20s linear infinite;
+            animation: 20s linear infinite;
             .p1{
                 @include dimension(20px, 20px);
                 background-color: rgb(237, 42, 185);
@@ -69,7 +69,7 @@ body{
             position: absolute;
 	        border-radius: 30%;
             border: 1px solid rgb(33, 33, 33);
-            animation: rotate2 10s linear infinite;
+            animation: 10s linear infinite;
             .p2{
                 @include dimension(25px, 25px);
                 background-color: rgb(201, 59, 59);
@@ -84,7 +84,7 @@ body{
             position: absolute;
 	        border-radius: 30%;
             border: 1px solid rgb(33, 33, 33);
-            animation: rotate3 14s linear infinite;
+            animation: 14s linear infinite;
             .p3{
                 @include dimension(12px, 12px);
                 background-color: rgb(59, 66, 201);
@@ -100,7 +100,7 @@ body{
             position: absolute;
 	        border-radius: 30%;
             border: 1px solid rgb(33, 33, 33);
-            animation: rotate4 30s linear infinite;
+            animation: 30s linear infinite;
             .p4{
                 @include dimension(50px, 50px);
                 background-color: rgb(31, 234, 35);

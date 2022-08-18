@@ -74,8 +74,8 @@ body {
   border-radius: 30%;
   position: absolute;
   border: 1px solid #212121;
-  -webkit-animation: rotate1 20s linear infinite;
-          animation: rotate1 20s linear infinite;
+  -webkit-animation: 20s linear infinite;
+          animation: 20s linear infinite;
 }
 
 .container #animation .orbit1 .p1 {
@@ -92,8 +92,8 @@ body {
   position: absolute;
   border-radius: 30%;
   border: 1px solid #212121;
-  -webkit-animation: rotate2 10s linear infinite;
-          animation: rotate2 10s linear infinite;
+  -webkit-animation: 10s linear infinite;
+          animation: 10s linear infinite;
 }
 
 .container #animation .orbit2 .p2 {
@@ -110,8 +110,8 @@ body {
   position: absolute;
   border-radius: 30%;
   border: 1px solid #212121;
-  -webkit-animation: rotate3 14s linear infinite;
-          animation: rotate3 14s linear infinite;
+  -webkit-animation: 14s linear infinite;
+          animation: 14s linear infinite;
 }
 
 .container #animation .orbit3 .p3 {
@@ -128,8 +128,8 @@ body {
   position: absolute;
   border-radius: 30%;
   border: 1px solid #212121;
-  -webkit-animation: rotate4 30s linear infinite;
-          animation: rotate4 30s linear infinite;
+  -webkit-animation: 30s linear infinite;
+          animation: 30s linear infinite;
 }
 
 .container #animation .orbit4 .p4 {

@@ -7,6 +7,10 @@ const min = document.querySelector('.min');
 const sec = document.querySelector(".sec");
 const start = document.querySelector("#start");
 const pause = document.querySelector("#pause");
+const orbit1 = document.querySelector(".orbit1");
+const orbit2 = document.querySelector(".orbit2");
+const orbit3 = document.querySelector(".orbit3");
+const orbit4 = document.querySelector(".orbit4");
 
 t25.value = 25;
 t30.value = 30;
@@ -26,6 +30,10 @@ boxes.forEach(box => {
 
 
 start.addEventListener("click", () => {
+    orbit1.style.animationName = "rotate1";
+    orbit2.style.animationName = "rotate2";
+    orbit3.style.animationName = "rotate3";
+    orbit4.style.animationName = "rotate4";
     start.innerHTML = "RESUME";
     start.style.display = "none";
     pause.style.display = "block";
