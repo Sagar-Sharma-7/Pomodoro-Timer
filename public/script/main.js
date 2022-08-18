@@ -21,6 +21,7 @@ let timer_min;
 boxes.forEach(box => {
     const min_v = box.value;
     box.addEventListener("click", () => {
+        orbit4.style.animationName = "rotate4";
         $("#timer_slot").slideUp();
         min.innerHTML = min_v;
         timer_min = min_v;
@@ -30,10 +31,9 @@ boxes.forEach(box => {
 
 
 start.addEventListener("click", () => {
-    orbit1.style.animationName = "rotate1";
     orbit2.style.animationName = "rotate2";
     orbit3.style.animationName = "rotate3";
-    orbit4.style.animationName = "rotate4";
+    orbit1.style.animationName = "rotate1";
     start.innerHTML = "RESUME";
     start.style.display = "none";
     pause.style.display = "block";
@@ -45,7 +45,14 @@ start.addEventListener("click", () => {
         const now = new Date();
         let s_n = now.getSeconds();
         let sLeft = s - s_n;
-
+        if(i < 10){
+            min.innerHTML = "0" + i;
+        }else{
+            min.innerHTML = i;
+        }
+        if(sLeft == 0){
+            i -= 1;
+        }
         if(sLeft >=0){
             if(sLeft < 10){
                 sec.innerHTML = "0" + sLeft;
