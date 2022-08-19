@@ -263,6 +263,46 @@ body {
   background-color: #202020;
   border-radius: 20px;
   margin: auto 1%;
+  display: none;
+}
+
+.container #filler #time_spent {
+  background-color: #4f84ff;
+  width: 0%;
+  height: 100%;
+  border-radius: 20px;
+  -webkit-animation: fill 30s linear infinite;
+          animation: fill 30s linear infinite;
+}
+
+@-webkit-keyframes fill {
+  0% {
+    background-color: #4fffcd;
+  }
+  25% {
+    background-color: #bd60f3;
+  }
+  50% {
+    background-color: #fa59cc;
+  }
+  75% {
+    background-color: #f48157;
+  }
+}
+
+@keyframes fill {
+  0% {
+    background-color: #4fffcd;
+  }
+  25% {
+    background-color: #bd60f3;
+  }
+  50% {
+    background-color: #fa59cc;
+  }
+  75% {
+    background-color: #f48157;
+  }
 }
 
 .container #timer {
