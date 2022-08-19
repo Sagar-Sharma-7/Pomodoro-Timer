@@ -8,12 +8,19 @@ setInterval(() => {
     const date = new Date();
     let sec = date.getSeconds();
     let sLeft = s - sec;
-    console.log("min =", i);
-    if(sLeft == 0){
-        i = i -1;
-    }
-     if(sLeft >=0){
-         console.log(sLeft);
-    }else{console.log(60 + sLeft)};
+    if(sLeft >=0){
+        if(sLeft < 10){
+            console.log("0"+ sLeft)
+        }else{
+            console.log(sLeft)
+        }
+    }else{
+        if(60 + sLeft < 10){
+            console.log("0"+ 60 + sLeft)
+        }else{
+            console.log(60 + sLeft)
+        }
+    };
+
 }, 1000); 
 

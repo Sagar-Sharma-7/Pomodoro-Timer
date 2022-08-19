@@ -66,10 +66,11 @@ start.addEventListener("click", () => {
                 sec.innerHTML = sLeft;
             }
         }else{
-            if(60 + sLeft < 10){
-                sec.innerHTML = "0" + 60 + sLeft;
+            let y = 60 + sLeft;
+            if(y < 10){
+                sec.innerHTML = "0"+y;
             }else{
-                sec.innerHTML = 60 + sLeft;
+                sec.innerHTML =y;
             }
         };
         z += 100/(timer_min *60);
