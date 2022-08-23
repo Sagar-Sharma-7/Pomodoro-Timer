@@ -74,8 +74,8 @@ body {
   border-radius: 30%;
   position: absolute;
   border: 1px solid #212121;
-  -webkit-animation: 20s linear infinite;
-          animation: 20s linear infinite;
+  -webkit-animation: 22s linear infinite;
+          animation: 22s linear infinite;
 }
 
 .container #animation .orbit1 .p1 {
@@ -92,8 +92,8 @@ body {
   position: absolute;
   border-radius: 30%;
   border: 1px solid #212121;
-  -webkit-animation: 10s linear infinite;
-          animation: 10s linear infinite;
+  -webkit-animation: 17s linear infinite;
+          animation: 17s linear infinite;
 }
 
 .container #animation .orbit2 .p2 {
@@ -110,8 +110,8 @@ body {
   position: absolute;
   border-radius: 30%;
   border: 1px solid #212121;
-  -webkit-animation: 14s linear infinite;
-          animation: 14s linear infinite;
+  -webkit-animation: 20s linear infinite;
+          animation: 20s linear infinite;
 }
 
 .container #animation .orbit3 .p3 {
@@ -174,7 +174,7 @@ body {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-  100% {
+  50% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
@@ -185,7 +185,7 @@ body {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-  100% {
+  50% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
@@ -196,7 +196,7 @@ body {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-  100% {
+  50% {
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg);
   }
@@ -207,7 +207,7 @@ body {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-  100% {
+  50% {
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg);
   }
@@ -218,7 +218,7 @@ body {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-  100% {
+  50% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
@@ -229,7 +229,7 @@ body {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-  100% {
+  50% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
@@ -240,7 +240,7 @@ body {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-  100% {
+  50% {
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg);
   }
@@ -251,7 +251,7 @@ body {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-  100% {
+  50% {
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg);
   }
@@ -288,6 +288,9 @@ body {
   75% {
     background-color: #f48157;
   }
+  100% {
+    background-color: #4fffcd;
+  }
 }
 
 @keyframes fill {
@@ -302,6 +305,9 @@ body {
   }
   75% {
     background-color: #f48157;
+  }
+  100% {
+    background-color: #4fffcd;
   }
 }
 
@@ -430,5 +436,15 @@ body {
 
 #timer_slot .t40 {
   background-color: #7171f6;
+}
+
+#break {
+  width: 100vw;
+  height: 50vh;
+  z-index: 9999;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 1px solid white;
 }
 /*# sourceMappingURL=style.css.map */

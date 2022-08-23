@@ -6,7 +6,6 @@ const t40 = document.querySelector('.t40');
 const min = document.querySelector('.min');
 const sec = document.querySelector(".sec");
 const start = document.querySelector("#start");
-const pause = document.querySelector("#pause");
 const orbit1 = document.querySelector(".orbit1");
 const orbit2 = document.querySelector(".orbit2");
 const orbit3 = document.querySelector(".orbit3");
@@ -38,9 +37,9 @@ start.addEventListener("click", () => {
     orbit2.style.animationName = "rotate2";
     orbit3.style.animationName = "rotate3";
     orbit1.style.animationName = "rotate1";
-    start.innerHTML = "RESUME";
+    const clock = new Audio('./public/audio/clock-winding.mp3');
+    clock.play();
     start.style.display = "none";
-    pause.style.display = "block";
     const milli = new Date().getTime() + timer_min * 60 * 1000;
     const date = new Date(milli);
     const s = date.getSeconds();
@@ -74,6 +73,13 @@ start.addEventListener("click", () => {
             }
         };
         z += 100/(timer_min *60);
+
+        if(Math.floor(z) == 100){
+            time_spent.style.width = "100%";
+            clearInterval(timer);
+            const timeup = new Audio("./public/audio/timeup.mp3");
+            timeup.play();
+        }
     }, 1000);
 
 });

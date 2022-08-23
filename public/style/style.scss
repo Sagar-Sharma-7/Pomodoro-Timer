@@ -55,7 +55,7 @@ body{
 	        border-radius: 30%;
             position: absolute;
             border: 1px solid rgb(33, 33, 33);
-            animation: 20s linear infinite;
+            animation: 22s linear infinite;
             .p1{
                 @include dimension(20px, 20px);
                 background-color: rgb(237, 42, 185);
@@ -69,7 +69,7 @@ body{
             position: absolute;
 	        border-radius: 30%;
             border: 1px solid rgb(33, 33, 33);
-            animation: 10s linear infinite;
+            animation: 17s linear infinite;
             .p2{
                 @include dimension(25px, 25px);
                 background-color: rgb(201, 59, 59);
@@ -84,7 +84,7 @@ body{
             position: absolute;
 	        border-radius: 30%;
             border: 1px solid rgb(33, 33, 33);
-            animation: 14s linear infinite;
+            animation: 20s linear infinite;
             .p3{
                 @include dimension(12px, 12px);
                 background-color: rgb(59, 66, 201);
@@ -125,7 +125,7 @@ body{
             0%{
                 transform: rotate(0);
             }
-            100%{
+            50%{
                 transform: rotate(360deg);
             }
         }
@@ -133,20 +133,20 @@ body{
             0%{
                 transform: rotate(0);
             }
-            100%{transform: rotate(-360deg)}
+            50%{transform: rotate(-360deg)}
         }
 
         @keyframes rotate3 {
             0%{
                 transform: rotate(0);
             }
-            100%{transform: rotate(360deg)}
+            50%{transform: rotate(360deg)}
         }
         @keyframes rotate4 {
             0%{
                 transform: rotate(0);
             }
-            100%{transform: rotate(-360deg)}
+            50%{transform: rotate(-360deg)}
         }
     }
     #filler{
@@ -174,6 +174,9 @@ body{
             }
             75%{
                 background-color: rgb(244, 129, 87)
+            }
+            100%{
+                background-color: rgb(79, 255, 205);
             }
             
         }
@@ -249,5 +252,15 @@ body{
     .t30{background-color: rgb(247, 117, 117);}
     .t35{background-color: rgb(251, 113, 214);}
     .t40{background-color: rgb(113, 113, 246)}
+    
+}
+
+#break{
+    @include dimension(100vw, 50vh);
+    z-index: 9999;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 1px solid white;
     
 }
