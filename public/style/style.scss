@@ -55,7 +55,8 @@ body{
 	        border-radius: 30%;
             position: absolute;
             border: 1px solid rgb(33, 33, 33);
-            animation: 22s linear infinite;
+            animation: 20s linear;
+            animation-iteration-count: infinite;
             .p1{
                 @include dimension(20px, 20px);
                 background-color: rgb(237, 42, 185);
@@ -69,7 +70,8 @@ body{
             position: absolute;
 	        border-radius: 30%;
             border: 1px solid rgb(33, 33, 33);
-            animation: 17s linear infinite;
+            animation: 13s linear;
+            animation-iteration-count: infinite;
             .p2{
                 @include dimension(25px, 25px);
                 background-color: rgb(201, 59, 59);
@@ -84,7 +86,8 @@ body{
             position: absolute;
 	        border-radius: 30%;
             border: 1px solid rgb(33, 33, 33);
-            animation: 20s linear infinite;
+            animation: 18s linear;
+            animation-iteration-count: infinite;
             .p3{
                 @include dimension(12px, 12px);
                 background-color: rgb(59, 66, 201);
@@ -100,7 +103,8 @@ body{
             position: absolute;
 	        border-radius: 30%;
             border: 1px solid rgb(33, 33, 33);
-            animation: 30s linear infinite;
+            animation: 15s linear;
+            animation-iteration-count: infinite;
             .p4{
                 @include dimension(50px, 50px);
                 background-color: rgb(31, 234, 35);
@@ -214,7 +218,7 @@ body{
             font-size: 1.5rem;
             color: white;
         }
-        #pause{
+        #cancel{
             display: none;
         }
     }

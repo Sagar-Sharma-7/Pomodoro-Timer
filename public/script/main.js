@@ -6,6 +6,7 @@ const t40 = document.querySelector('.t40');
 const min = document.querySelector('.min');
 const sec = document.querySelector(".sec");
 const start = document.querySelector("#start");
+const cancel = document.querySelector("#cancel");
 const orbit1 = document.querySelector(".orbit1");
 const orbit2 = document.querySelector(".orbit2");
 const orbit3 = document.querySelector(".orbit3");
@@ -27,6 +28,7 @@ boxes.forEach(box => {
         filler.style.display = "block";
         $("#timer_slot").slideUp();
         min.innerHTML = min_v;
+        sec.innerHTML = "00";
         timer_min = min_v;
 
     });
@@ -40,6 +42,7 @@ start.addEventListener("click", () => {
     const clock = new Audio('./public/audio/clock-winding.mp3');
     clock.play();
     start.style.display = "none";
+    cancel.style.display = "block";
     const milli = new Date().getTime() + timer_min * 60 * 1000;
     const date = new Date(milli);
     const s = date.getSeconds();
@@ -80,6 +83,14 @@ start.addEventListener("click", () => {
             const timeup = new Audio("./public/audio/timeup.mp3");
             timeup.play();
         }
+
+        cancel.addEventListener("click", () => {
+            clearInterval(timer);
+            $("#timer_slot").slideDown();
+            start.style.display = "block";
+            cancel.style.display = "none";
+            filler.style.display = "none";
+        });
     }, 1000);
 
 });
