@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Maze&display=swap');
 
 @mixin flex($jus: center, $alg: center){
     display: flex;
@@ -260,11 +261,43 @@ body{
 }
 
 #break{
-    @include dimension(100vw, 50vh);
+    @include dimension(100vw, 40vh);
     z-index: 9999;
     position: absolute;
     bottom: 0;
     left: 0;
-    border: 1px solid white;
-    
+    background-color: #000000;
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: space-between;
+    p, #break_timer{
+        text-align: center;
+        @include dimension(100vw, 13vh);
+    }
+    p{
+        font-family: 'Rubik Maze', cursive;
+        font-size: 5rem;
+    }
+    #break_timer{
+        border-right: 5px dotted red;
+        border-left: 5px dotted red;
+        @include flex();
+        div{
+            font-family: 'Rubik Maze', cursive;
+            font-size: 4rem;
+            margin: auto 5% auto 5%;
+            color: rgb(126, 255, 112);
+        }
+    }
+    button{
+        font-size: 2rem;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        position: relative;
+        @include dimension(50vw, 10vh);
+        left: 24vw;
+        bottom: -10px;
+    }
 }

@@ -13,6 +13,10 @@ const orbit3 = document.querySelector(".orbit3");
 const orbit4 = document.querySelector(".orbit4");
 const filler = document.querySelector("#filler");
 const time_spent = document.querySelector("#time_spent");
+const breakdiv = document.querySelector("#break");
+
+$("#break").slideUp();
+
 
 t25.value = 25;
 t30.value = 30;
@@ -29,7 +33,7 @@ boxes.forEach(box => {
         $("#timer_slot").slideUp();
         min.innerHTML = min_v;
         sec.innerHTML = "00";
-        timer_min = min_v;
+        timer_min = 1;
 
     });
 });
@@ -82,6 +86,10 @@ start.addEventListener("click", () => {
             clearInterval(timer);
             const timeup = new Audio("./public/audio/timeup.mp3");
             timeup.play();
+            setTimeout(() => {
+                breakdiv.style.display= "flex";
+                $("#break").slideDown();
+            }, 1500);
         }
 
         cancel.addEventListener("click", () => {
@@ -94,3 +102,4 @@ start.addEventListener("click", () => {
     }, 1000);
 
 });
+
