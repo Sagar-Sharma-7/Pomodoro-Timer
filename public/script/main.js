@@ -14,6 +14,8 @@ const orbit4 = document.querySelector(".orbit4");
 const filler = document.querySelector("#filler");
 const time_spent = document.querySelector("#time_spent");
 const breakdiv = document.querySelector("#break");
+const min_break = document.querySelector(".min_break");
+const sec_break = document.querySelector(".sec_break");
 
 $("#break").slideUp();
 
@@ -33,6 +35,7 @@ boxes.forEach(box => {
         $("#timer_slot").slideUp();
         min.innerHTML = min_v;
         sec.innerHTML = "00";
+        // timer_min = min_v;
         timer_min = 1;
 
     });
@@ -51,7 +54,7 @@ start.addEventListener("click", () => {
     const date = new Date(milli);
     const s = date.getSeconds();
     let i = timer_min -1;
-    z = 0;
+    let z = 0;
     const timer = setInterval(() =>{
         const now = new Date();
         let s_n = now.getSeconds();
@@ -86,10 +89,40 @@ start.addEventListener("click", () => {
             clearInterval(timer);
             const timeup = new Audio("./public/audio/timeup.mp3");
             timeup.play();
-            setTimeout(() => {
-                breakdiv.style.display= "flex";
-                $("#break").slideDown();
-            }, 1500);
+            breakdiv.style.display= "flex";
+            $("#break").slideDown();
+            const b_date_milli = new Date().getTime() + 5 * 60 * 1000;
+            const b_date = new Date(b_date_milli);
+            const b_s = b_date.getSeconds();
+            let x = 4;
+            let w = 0;
+            const breakTimer = setInterval(() => {
+                const b_now = new Date();
+                const b_sec_n = b_now.getSeconds();
+                const b_sLeft = b_s - b_sec_n; 
+                min_break.innerHTML = "0" + x;
+                if(b_sLeft == 0){
+                    x -= 1;
+                }
+
+                if(b_sLeft >=0){
+                    if(b_sLeft < 10){
+                        sec_break.innerHTML = "0" + b_sLeft;
+                    }else{
+                        sec_break.innerHTML = b_sLeft;
+                    }
+                }else{
+                    let y = 60 + b_sLeft;
+                    if(y < 10){
+                        sec_break.innerHTML = "0"+y;
+                    }else{
+                        sec_break.innerHTML =y;
+                    }
+                };
+            }, 1000);
+
+
+
         }
 
         cancel.addEventListener("click", () => {
