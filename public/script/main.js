@@ -16,6 +16,7 @@ const time_spent = document.querySelector("#time_spent");
 const breakdiv = document.querySelector("#break");
 const min_break = document.querySelector(".min_break");
 const sec_break = document.querySelector(".sec_break");
+const skip_btn = document.querySelector("#skip_btn");
 
 $("#break").slideUp();
 
@@ -35,8 +36,7 @@ boxes.forEach(box => {
         $("#timer_slot").slideUp();
         min.innerHTML = min_v;
         sec.innerHTML = "00";
-        // timer_min = min_v;
-        timer_min = 1;
+        timer_min = min_v;
 
     });
 });
@@ -87,7 +87,7 @@ start.addEventListener("click", () => {
         if(Math.floor(z) == 100){
             time_spent.style.width = "100%";
             clearInterval(timer);
-            const timeup = new Audio("./public/audio/timeup.mp3");
+            let timeup = new Audio("./public/audio/timeup.mp3");
             timeup.play();
             breakdiv.style.display= "flex";
             $("#break").slideDown();
@@ -96,6 +96,7 @@ start.addEventListener("click", () => {
             const b_s = b_date.getSeconds();
             let x = 4;
             let w = 0;
+            let z = 0;
             const breakTimer = setInterval(() => {
                 const b_now = new Date();
                 const b_sec_n = b_now.getSeconds();
@@ -119,6 +120,25 @@ start.addEventListener("click", () => {
                         sec_break.innerHTML =y;
                     }
                 };
+
+                z += 100/(5 *60);
+                if(Math.floor(z) == 100){
+                    clearInterval(breakTimer);
+                    let timeup = new Audio("./public/audio/timeup.mp3");
+                    timeup.play();
+                    $("#break").slideUp();
+                    $("#timer_slot").slideDown();
+                    cancel.style.display = "none";
+                    start.style.display = "block";
+                }
+                skip_btn.addEventListener("click", () => {
+                    clearInterval(breakTimer);
+                    $("#break").slideUp();
+                    $("#timer_slot").slideDown();
+                    cancel.style.display = "none";
+                    start.style.display = "block";
+                });
+
             }, 1000);
 
 
